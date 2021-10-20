@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const db = "mongodb://localhost/userdb"
 
-const glob = require('glob')
+const glob = require('glob') 
 const {resolve} = require('path')
 
 exports.initSchemas = () =>{

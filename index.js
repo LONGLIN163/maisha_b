@@ -8,7 +8,7 @@ const {connect , initSchemas} = require('./database/init.js')
   await connect()
   initSchemas()
   const User = mongoose.model('User')
-  let oneUser = new User({userName:'haha',password:'123456'})
+  let oneUser = new User({userName:'xixixi',password:'123456'})
   oneUser.save().then(()=>{
     console.log("insert success")
   })
