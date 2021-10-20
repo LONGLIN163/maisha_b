@@ -1,13 +1,19 @@
 const mongoose = require('mongoose')
-const db = "mongodb://localhost/simle-db" //27017 by default
+const db = "mongodb://localhost/userdb"
 
-mongoose.Promise =  global.Promise
+const glob = require('glob')
+const {resolve} = require('path')
+
+exports.initSchemas = () =>{
+    glob.sync(resolve(__dirname,'./schema','**/*.js')).forEach(require)
+}
 
 exports.connect = ()=>{
     
     mongoose.connect(db)
 
     let maxConnectTimes = 0 
+
     return  new Promise((resolve,reject)=>{
 
         //add db event listoners
@@ -39,6 +45,7 @@ exports.connect = ()=>{
         //when connect at first time
         mongoose.connection.once('open',()=>{
             console.log('MongoDB Connected successfully!')
+            resolve()  // ****dont forget this ***
         })
 
     })
