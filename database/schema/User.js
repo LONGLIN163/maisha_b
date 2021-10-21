@@ -11,9 +11,19 @@ const userSchema = new Schema({
   password:String,
   createAt:{type:Date,default:Date.now()},
   lastLoginAt:{type:Date,default:Date.now()}
-},{
-  collection:'user' // define collection name in db
 })
+
+// login logic
+userSchema.methods = { // this is an instance method, need to create an instance, **methods**
+  comparePassword:(_password,password)=>{
+      return new Promise((resolve,reject)=>{
+          bcrypt.compare(_password,password,(err,isMatch)=>{
+              if(!err) resolve(isMatch) // if success, isMatch==true
+              else reject(err)
+          })
+      })
+  }
+}
 
 // it will be executed for every data saving 
 userSchema.pre('save', function(next){
