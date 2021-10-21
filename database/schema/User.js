@@ -11,7 +11,10 @@ const userSchema = new Schema({
   password:String,
   createAt:{type:Date,default:Date.now()},
   lastLoginAt:{type:Date,default:Date.now()}
+},{
+  collection:'user' // define collection name in db
 })
+
 // it will be executed for every data saving 
 userSchema.pre('save', function(next){
   //console.log(this)
