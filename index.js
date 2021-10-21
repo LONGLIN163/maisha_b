@@ -2,6 +2,12 @@ const Koa = require('koa');
 const app = new Koa();
 const mongoose = require('mongoose')
 const {connect , initSchemas} = require('./database/init.js')
+// then we can do the post
+const bodyParser = require('koa-bodyparser')
+app.use(bodyParser());
+// then we can cors
+const cors = require('koa2-cors')
+app.use(cors())
 
 // load router objs
 const Router = require('koa-router')

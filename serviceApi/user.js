@@ -4,8 +4,9 @@ let router = new Router()
 router.get('/',async (ctx) => {
     ctx.body="this is user home"
 })
-router.get('/register',async (ctx) => {
-    ctx.body="this is user register"
+router.post('/register',async (ctx) => {
+    console.log(ctx.request.body)
+    ctx.body=ctx.request.body;
 })
 
 module.exports=router;
