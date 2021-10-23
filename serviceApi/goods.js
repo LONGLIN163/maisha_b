@@ -102,10 +102,10 @@ router.get('/getCategoryList',async(ctx)=>{
     }
 })
 
-router.get('/getCategorySubList',async(ctx)=>{
+router.post('/getSubCategoryList',async(ctx)=>{
     try{
-        //let categoryId = ctx.request.body.categoryId
-        let categoryId = 1
+        let categoryId = ctx.request.body.categoryId
+        //let categoryId = 1
         const CategorySub = mongoose.model('CategorySub')
         let result = await CategorySub.find({MALL_CATEGORY_ID:categoryId}).exec()
         ctx.body={code:200,message:result}
