@@ -114,12 +114,20 @@ router.post('/getSubCategoryList',async(ctx)=>{
     }
 })
 
-router.get('/getGoodsListByCategorySubID',async(ctx)=>{
+router.post('/getGoodsListByCategorySubID',async(ctx)=>{
     try{
-        //let categorySubId = ctx.request.body.categoryId
-        let categorySubId = '2c9f6c946016ea9b016016f79c8e0000'
+        let categorySubId = ctx.request.body.categorySubId 
+        let page=ctx.request.body.page // how many pages
+        console.log(categorySubId,page)
+
+        let num=10 // show items in each page
+        let start=(page-1)*10 // start item index in each page
+
         const Goods = mongoose.model('Goods')
-        let result = await Goods.find({SUB_ID:categorySubId}).exec()
+        let result = await Goods.find({SUB_ID:categorySubId})
+        .skip(start)
+        .limit(num)
+        .exec()
         ctx.body={code:200,message:result}
     }catch(err){
         ctx.body={code:500,message:err}
