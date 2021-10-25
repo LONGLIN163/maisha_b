@@ -8,8 +8,31 @@ router.get('/',async (ctx) => {
     ctx.body="goods home"
 })
 
+router.get('/replace',async(ctx)=>{
+    fs.readFile('./data_json/goods.json','utf8',(err,data)=>{
+       data=JSON.parse(data) // convert str to obj
+       data.map((item,index)=>{
+            console.log(item)
+            item.NAME="product name"
+       })
+       //console.log("------------")
+       //console.log(data)
+       let newdata = JSON.stringify(data);
+       fs.writeFile('./data_json/haha.json', newdata, (err) => {
+        if (err) throw err;
+        console.log('Data written to file');
+       });
+    })
+   ctx.body="convert data"
+})
+
+
 router.get('/importgoods',async(ctx)=>{
-     fs.readFile('./data_json/goods.json','utf8',(err,data)=>{
+     //fs.readFile('./data_json/goods.json','utf8',(err,data)=>{
+     fs.readFile('./data_json/newgoods.json','utf8',(err,data)=>{
+        console.log(1)
+        //console.log(data)
+        console.log(2)
         data=JSON.parse(data)
         let saveCount=0
         const Goods = mongoose.model('Goods')

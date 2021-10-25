@@ -2,7 +2,7 @@
     "RECORDS":[
     {
     "ID":"1",
-    "MALL_CATEGORY_NAME":"新鲜水果",
+    "MALL_CATEGORY_NAME":"Fruit",
     "IMAGE":"http:\/\/images.baixingliangfan.cn\/firstCategoryPicture\/20180408\/20180408111959_2837.png",
     "TYPE":2,
     "SORT":1,
@@ -10,7 +10,7 @@
     },
     {
     "ID":"2",
-    "MALL_CATEGORY_NAME":"中外名酒",
+    "MALL_CATEGORY_NAME":"Drinks",
     "IMAGE":"http:\/\/images.baixingliangfan.cn\/firstCategoryPicture\/20180408\/20180408112010_4489.png",
     "TYPE":2,
     "SORT":2,
@@ -18,7 +18,7 @@
     },
     {
     "ID":"3",
-    "MALL_CATEGORY_NAME":"营养奶品",
+    "MALL_CATEGORY_NAME":"Dairy",
     "IMAGE":"http:\/\/images.baixingliangfan.cn\/firstCategoryPicture\/20180408\/20180408113102_1595.png",
     "TYPE":2,
     "SORT":3,
@@ -26,7 +26,7 @@
     },
     {
     "ID":"4",
-    "MALL_CATEGORY_NAME":"个人护理",
+    "MALL_CATEGORY_NAME":"Commodity",
     "IMAGE":"http:\/\/images.baixingliangfan.cn\/firstCategoryPicture\/20180408\/20180408112053_8191.png",
     "TYPE":2,
     "SORT":5,
@@ -34,7 +34,7 @@
     },
     {
     "ID":"5",
-    "MALL_CATEGORY_NAME":"食品饮料",
+    "MALL_CATEGORY_NAME":"Snacks",
     "IMAGE":"http:\/\/images.baixingliangfan.cn\/firstCategoryPicture\/20180408\/20180408113048_1276.png",
     "TYPE":2,
     "SORT":4,
