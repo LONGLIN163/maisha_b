@@ -14,6 +14,8 @@ router.get('/replace',async(ctx)=>{
        data.map((item,index)=>{
             console.log(item)
             item.NAME="product name"
+            item.DETAIL="<img src=\"https://m.media-amazon.com/images/I/61TWkeyVPhL._AC_SL1000_.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"https://m.media-amazon.com/images/I/61K69gAfg+L._AC_SL1000_.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"https://m.media-amazon.com/images/I/61Us54zEBLL._AC_SL1000_.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"https://m.media-amazon.com/images/I/61bxFSoFLqL._AC_SL1000_.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"https://m.media-amazon.com/images/I/61cU4mOTZlL._AC_SL1000_.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"https://m.media-amazon.com/images/I/71c6F8-xDML._AC_SL1000_.jpg\" width=\"100%\" height=\"auto\" alt=\"\" />"
+            item.IMAGE1="https://m.media-amazon.com/images/I/61TWkeyVPhL._AC_SL1000_.jpg"
        })
        //console.log("------------")
        //console.log(data)
