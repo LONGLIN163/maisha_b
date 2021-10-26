@@ -31,9 +31,9 @@ app.use(async ctx => {
   ctx.body = 'Hello World';
 });
 
-app.listen(3000,()=>{
-    console.log('[Server] starting at port 3000')
-})
+// app.listen(3000,()=>{
+//     console.log('[Server] starting at port 3000')
+// })
 
-// app.listen(process.env.PORT, '0.0.0.0');
-// console.log("The app is running on server---"+process.env.PORT)
+app.listen(process.env.PORT, '0.0.0.0');
+console.log("The app is running on server")
