@@ -131,8 +131,8 @@ router.get('/getCategoryList',async(ctx)=>{
 
 router.post('/getSubCategoryList',async(ctx)=>{
     try{
-        //let categoryId = ctx.request.body.categoryId
-        let categoryId = '1'
+        let categoryId = ctx.request.body.categoryId
+        //let categoryId = '1'
         console.log("getSubCategoryList---",categoryId)
         console.log("getSubCategoryList---",(typeof categoryId))
         const CategorySub = mongoose.model('CategorySub')
