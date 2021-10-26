@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const db = "mongodb://localhost/userdb"
+//const db = "mongodb://localhost/userdb"
+const db = "mongodb+srv://developerlin:Long2021...@cluster0.r4ghm.mongodb.net/maishadb?retryWrites=true&w=majority"
 
 const glob = require('glob') 
 const {resolve} = require('path')
